@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <!-- <script src="mySketch.js"></script> -->
+    <title>Draw it!</title>
+</head>
+<body>
+
+    <script> 
+        function setup() {
+        createCanvas(windowWidth, windowHeight);
+        background(200);
+    }
+        function draw() {
+        var centerX = windowWidth / 2 
+        var centerY = windowHeight / 2;
+        var px = mouseX - centerX;
+        var py = mouseY - centerY;
+        d = sqrt(px ** 2 + py ** 2);
+        fill(255,255,255)
+        textSize(25);
+        fill(100, 155+100*px/centerX, 155+100*py/centerY);
+        ellipse(mouseX, mouseY, d / 3, d / 3);
+        }
+
+    </script>
+</body>
+</html>
